@@ -1,0 +1,54 @@
+name: "✨ Funcionalidade ou melhoria"
+description: Algo novo ou uma melhoria em algo que já existe (POP-03 · manutenção evolutiva).
+title: "[Módulo] "
+labels: ["type:feat"]
+projects: ["construtoraimpacto/3"]
+body:
+  - type: input
+    id: asana
+    attributes:
+      label: Tarefa do Asana
+      description: Link da tarefa de origem (projeto [TI] - Desenvolvimento de Softwares).
+      placeholder: https://app.asana.com/...
+    validations:
+      required: true
+  - type: input
+    id: solicitante
+    attributes:
+      label: Solicitante e equipe
+      placeholder: "Ex.: Fulano · Mobília"
+  - type: textarea
+    id: historia
+    attributes:
+      label: História
+      value: "Como <perfil>, quero <ação> para <benefício>."
+    validations:
+      required: true
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Critérios de aceitação
+      value: |
+        - [ ] Dado <contexto>, quando <ação>, então <resultado>
+        - [ ]
+    validations:
+      required: true
+  - type: checkboxes
+    id: impacto
+    attributes:
+      label: Impacto
+      options:
+        - label: Altera banco de dados (migração)
+        - label: Afeta integrações (Sienge, Nydus, Microsoft Graph)
+        - label: Altera permissões ou perfis
+        - label: Envolve dados pessoais (LGPD)
+  - type: input
+    id: spec
+    attributes:
+      label: Especificação
+      placeholder: "docs/specs/..."
+  - type: input
+    id: estimativa
+    attributes:
+      label: Estimativa (pontos)
+      placeholder: "1, 2, 3, 5, 8 ou 13"
